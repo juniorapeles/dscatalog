@@ -3,6 +3,7 @@ package com.devsuperior.dscatalog.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Objects;
 
 
@@ -16,7 +17,14 @@ public class Category implements Serializable {
     private Long id;
     private String name;
 
-    public Category(){
+
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    private Instant createdAt;
+
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    private Instant updatedAt;
+
+    public Category() {
     }
 
     public Category(Long id, String name) {
@@ -28,16 +36,38 @@ public class Category implements Serializable {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
     }
 
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+
+    public Instant getUpdatedAt() {
+        return updatedAt;
+    }
+
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    @PrePersist
+    public void prePersist() {
+        createdAt = Instant.now();
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        updatedAt = Instant.now();
     }
 
     @Override
