@@ -19,6 +19,7 @@ O projeto principal desenvolvido neste Bootcamp é o DSCatalog, uma aplicação 
 ## Funcionalidades Implementadas
 
 - CRUD de produtos
+- CRUD de categorias
 - Autenticação de usuários
 - Autorização de acesso
 - Paginação de resultados
