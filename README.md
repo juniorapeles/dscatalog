@@ -15,6 +15,7 @@ O projeto principal desenvolvido neste Bootcamp é o DSCatalog, uma aplicação 
 - DTOs (Data Transfer Objects)
 - Segurança com Spring Security
 - Docker
+- Testes Unitários e Automatizados com JUnit Jupiter e Mockito
 
 ## Funcionalidades Implementadas
 
@@ -55,4 +56,3 @@ A aplicação pode ser facilmente containerizada usando Docker. Utilize os arqui
 ## Considerações Finais
 
 Este Bootcamp proporcionou uma excelente oportunidade para aprimorar habilidades em desenvolvimento web fullstack, utilizando tecnologias modernas como Spring Boot, React e Docker. A experiência adquirida ao desenvolver o DSCatalog preparou-me para enfrentar desafios no mundo real e me tornar um desenvolvedor mais competente.
-
