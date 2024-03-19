@@ -22,7 +22,7 @@ public class ProductResource {
 
     @GetMapping
     public ResponseEntity<Page<ProductDTO>> findAll(Pageable pageable){
-        Page<ProductDTO> list = service.findAllPaged(pageable);
+        Page<ProductDTO> list = service.findAll(pageable);
         return ResponseEntity.ok().body(list);
     }
 
