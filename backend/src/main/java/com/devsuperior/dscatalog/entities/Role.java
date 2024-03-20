@@ -1,14 +1,19 @@
 package com.devsuperior.dscatalog.entities;
 
-public class Role {
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "tb_role")
+public class Role {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long authority;
+    private String authority;
 
     public Role() {
     }
 
-    public Role(Long id, Long authority) {
+    public Role(Long id, String authority) {
         this.id = id;
         this.authority = authority;
     }
@@ -21,11 +26,11 @@ public class Role {
         this.id = id;
     }
 
-    public Long getAuthority() {
+    public String getAuthority() {
         return authority;
     }
 
-    public void setAuthority(Long authority) {
+    public void setAuthority(String authority) {
         this.authority = authority;
     }
 }
