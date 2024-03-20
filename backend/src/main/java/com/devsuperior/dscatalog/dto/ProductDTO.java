@@ -13,9 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class ProductDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+public class ProductDTO {
     private Long id;
     @Size(min = 5, max = 60, message = "Deve ter entre 5 e 60 caracteres")
     @NotBlank(message = "Campo requerido")
