@@ -1,14 +1,16 @@
 package com.devsuperior.dscatalog.dto;
 
 import com.devsuperior.dscatalog.entities.User;
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 
+import javax.validation.constraints.*;
+
+
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class UserDTO {
+public class UserDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private Long id;
     private String firstName;
